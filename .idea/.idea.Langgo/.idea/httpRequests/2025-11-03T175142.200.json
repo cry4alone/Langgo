@@ -1,0 +1,8 @@
+{
+  "id": "dbcd8d08-7091-4a4c-b8d9-e664164cb6d1",
+  "username": "johndoe",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "token": "token"
+}
