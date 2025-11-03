@@ -11,51 +11,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="150b0d93-6105-4647-a7ca-54e48b0e9f41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/copilot.data.migration.ask.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/copilot.data.migration.edit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/httpRequests/2025-11-03T123206.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/httpRequests/2025-11-03T123212.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/httpRequests/2025-11-03T175142.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/httpRequests/2025-11-03T175147.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/httpRequests/http-client.cookies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Langgo/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.API/Controllers/AuthenticationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.API/Langgo.API.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.API/Langgo.API.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.API/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.API/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.API/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.API/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Application/Langgo.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Application/Services/AuthenticationResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Application/Services/AuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Application/Services/IAuthenticationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Contracts/Authentification/LoginRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Contracts/Authentification/LoginResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Contracts/Authentification/RegisterRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Contracts/Authentification/RegisterResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Contracts/Langgo.Contracts.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Entities/GameParticipant.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Entities/GameSession.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Entities/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Entities/UserProgress.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Entities/WordDictionary.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Entities/WordPair.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Enums/GameMode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Enums/GameSessionStatus.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Enums/GameType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Interfaces/Repositories/IGameSessionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Interfaces/Repositories/IUserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Domain/Langgo.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.Infrastructure/Langgo.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Langgo.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.API/Controllers/AuthenticationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.API/Langgo.API.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.API/Langgo.API.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.API/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.API/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.API/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.API/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Application/Langgo.Application.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Application/Services/AuthenticationResponse.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Application/Services/AuthenticationService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Application/Services/IAuthenticationService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Contracts/Authentification/LoginRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Contracts/Authentification/LoginResponse.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Contracts/Authentification/RegisterRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Contracts/Authentification/RegisterResponse.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Contracts/Langgo.Contracts.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Entities/GameParticipant.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Entities/GameSession.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Entities/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Entities/UserProgress.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Entities/WordDictionary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Entities/WordPair.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Enums/GameMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Enums/GameSessionStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Enums/GameType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Interfaces/Repositories/IGameSessionRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Interfaces/Repositories/IUserRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Domain/Langgo.Domain.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.Infrastructure/Langgo.Infrastructure.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langgo.sln" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +88,7 @@
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -296,13 +282,14 @@
       <updated>1761989513974</updated>
       <workItem from="1761989515400" duration="8221000" />
       <workItem from="1762076937277" duration="4968000" />
-      <workItem from="1762146716032" duration="9757000" />
+      <workItem from="1762146716032" duration="10927000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
