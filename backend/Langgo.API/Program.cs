@@ -1,4 +1,6 @@
+using Langgo.Application;
 using Langgo.Application.Services;
+using Langgo.Infrastructure;
 using Microsoft.OpenApi.Models;
 
 namespace Langgo.API;
@@ -9,8 +11,8 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         {
-            // Зарегистрировать сервисы приложения
-            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+            builder.Services.AddApplication();
+            builder.Services.AddInfrastructure(builder.Configuration);
 
             // Зарегистрировать контроллеры и Swagger для разработки
             builder.Services.AddControllers();

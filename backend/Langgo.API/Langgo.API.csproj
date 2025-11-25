@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-    </PropertyGroup>
+      <UserSecretsId>cd6c3934-e1c9-463a-bcdd-b48b74b99f57</UserSecretsId>
+  </PropertyGroup>
     
     <ItemGroup>
       <ProjectReference Include="..\Langgo.Contracts\Langgo.Contracts.csproj" />
