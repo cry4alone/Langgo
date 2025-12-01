@@ -24,14 +24,15 @@ public class AuthenticationController : ControllerBase
             request.FirstName,
             request.LastName,
             request.Email,
-            request.Password
+            request.Password,
+            request.Language
         );
         var response = new RegisterResponse(
-            authResponse.Id,
-            authResponse.Username,
-            authResponse.FirstName,
-            authResponse.LastName,
-            authResponse.Email,
+            authResponse.User.Id,
+            authResponse.User.Username,
+            authResponse.User.FirstName,
+            authResponse.User.LastName,
+            authResponse.User.Email,
             authResponse.Token
         );
         
@@ -46,11 +47,11 @@ public class AuthenticationController : ControllerBase
             request.Password
         );
         var response = new RegisterResponse(
-            registerResponse.Id,
-            registerResponse.Username,
-            registerResponse.FirstName,
-            registerResponse.LastName,
-            registerResponse.Email,
+            registerResponse.User.Id,
+            registerResponse.User.Username,
+            registerResponse.User.FirstName,
+            registerResponse.User.LastName,
+            registerResponse.User.Email,
             registerResponse.Token
         );
         

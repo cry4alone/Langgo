@@ -1,6 +1,7 @@
 using Langgo.Application;
 using Langgo.Application.Services;
 using Langgo.Infrastructure;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.OpenApi.Models;
 
 namespace Langgo.API;
@@ -32,6 +33,8 @@ public class Program
                           .AllowAnyMethod();
                 });
             });
+
+            builder.Services.AddSingleton<ProblemDetailsFactory, LanggoProblemDetailsFactory>();
         }
         
         var app = builder.Build();
@@ -45,7 +48,8 @@ public class Program
         
         app.UseHttpsRedirection();
         app.UseCors("AllowLocal");
-
+        
+        app.UseExceptionHandler("/error");
         app.MapControllers();
         
         app.Run();

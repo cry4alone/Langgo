@@ -1,9 +1,7 @@
+using Langgo.Domain.Entities;
+
 namespace Langgo.Application.Services;
 
 public record AuthenticationResponse(
-        Guid Id,
-        string Username,
-        string FirstName,
-        string LastName,
-        string Email,
+        User User,
         string Token);
