@@ -1,6 +1,8 @@
 using Langgo.Application.Common.Interfaces.Authentication;
 using Langgo.Application.Common.Interfaces.Persistence;
 using Langgo.Domain.Entities;
+using ErrorOr;
+using Langgo.Domain.Common.Errors;
 
 namespace Langgo.Application.Services;
 
@@ -14,24 +16,21 @@ public class AuthenticationService : IAuthenticationService
         _jwtTokenGenerator = jwtTokenGenerator;
         _userRepository = userRepository;
     }
-    public AuthenticationResponse Login(string email, string password)
+    public ErrorOr<AuthenticationResponse> Login(string email, string password)
     {
         var existingUser = _userRepository.GetUserByEmail(email);
-        if (existingUser == null) 
-            throw new Exception("User not found");
-        
-        if(existingUser.Password != password)
-            throw new Exception("Wrong password");
-        
+        if (existingUser == null || existingUser.Password != password) 
+            return Errors.Authentication.InvalidCredentials;
+
         var token = _jwtTokenGenerator.GenerateToken(existingUser);
         
         return new AuthenticationResponse(existingUser, token);
     }
 
-    public AuthenticationResponse Register(string username, string firstName, string lastName, string email, string password, string language)
+    public ErrorOr<AuthenticationResponse> Register(string username, string firstName, string lastName, string email, string password, string language)
     {
         var existingUser = _userRepository.GetUserByEmail(email);
-        if (existingUser != null) throw new Exception("User with this email already exists");
+        if (existingUser != null) return Errors.User.DuplicateEmail;
 
         var user = new User
         {

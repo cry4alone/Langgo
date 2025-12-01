@@ -1,12 +1,13 @@
 using Langgo.Application.Services;
 using Langgo.Contracts.Authentification;
 using Microsoft.AspNetCore.Mvc;
+using ErrorOr;
 
 namespace Langgo.API.Controllers;
 
-[ApiController]
+
 [Route("api/[controller]")]
-public class AuthenticationController : ControllerBase
+public class AuthenticationController : ApiController
 {
     private readonly IAuthenticationService _authenticationService;
 
@@ -19,7 +20,7 @@ public class AuthenticationController : ControllerBase
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest request)
     {
-        var authResponse = _authenticationService.Register(
+        ErrorOr<AuthenticationResponse> authResponse = _authenticationService.Register(
             request.Username,
             request.FirstName,
             request.LastName,
@@ -27,7 +28,16 @@ public class AuthenticationController : ControllerBase
             request.Password,
             request.Language
         );
-        var response = new RegisterResponse(
+        
+        return authResponse.Match(
+            authResponse => Ok(MapAuthResponse(authResponse)),
+            errors => Problem(errors)
+        );
+    }
+
+    private static RegisterResponse MapAuthResponse(AuthenticationResponse authResponse)
+    {
+        return new RegisterResponse(
             authResponse.User.Id,
             authResponse.User.Username,
             authResponse.User.FirstName,
@@ -35,8 +45,6 @@ public class AuthenticationController : ControllerBase
             authResponse.User.Email,
             authResponse.Token
         );
-        
-        return Ok(response);
     }
 
     [HttpPost("login")]
@@ -46,15 +54,21 @@ public class AuthenticationController : ControllerBase
             request.Email,
             request.Password
         );
-        var response = new RegisterResponse(
-            registerResponse.User.Id,
-            registerResponse.User.Username,
-            registerResponse.User.FirstName,
-            registerResponse.User.LastName,
-            registerResponse.User.Email,
-            registerResponse.Token
+
+        return registerResponse.Match(
+            registerResponse => Ok(MapAuthResponse(registerResponse)),
+            errors => Problem(errors));
+    }
+    
+    private static RegisterResponse MapLogResponse(AuthenticationResponse authResponse)
+    {
+        return new RegisterResponse(
+            authResponse.User.Id,
+            authResponse.User.Username,
+            authResponse.User.FirstName,
+            authResponse.User.LastName,
+            authResponse.User.Email,
+            authResponse.Token
         );
-        
-        return Ok(response);
     }
 }

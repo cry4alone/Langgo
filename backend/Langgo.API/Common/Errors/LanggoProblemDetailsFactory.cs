@@ -1,11 +1,12 @@
-#nullable enable
-
 using System.Diagnostics;
-using Microsoft.AspNetCore.Http;
+using ErrorOr;
+using Langgo.API.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace Microsoft.AspNetCore.Mvc.Infrastructure;
+namespace Langgo.API.Common.Errors;
 
 public sealed class LanggoProblemDetailsFactory : ProblemDetailsFactory
 {
@@ -92,9 +93,12 @@ public sealed class LanggoProblemDetailsFactory : ProblemDetailsFactory
         {
             problemDetails.Extensions["traceId"] = traceId;
         }
+        var errors = httpContext.Items[HttpContextItemKeys.Errors] as List<Error>;
+        if (errors != null)
+        {
+            problemDetails.Extensions.Add("errorCodes", errors.Select(error => error.Code));
+        }
         
-        problemDetails.Extensions["custom"] = "lol custom";
-
         _configure?.Invoke(new() { HttpContext = httpContext!, ProblemDetails = problemDetails });
     }
 }

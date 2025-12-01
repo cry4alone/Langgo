@@ -1,3 +1,4 @@
+using Langgo.API.Common.Errors;
 using Langgo.Application;
 using Langgo.Application.Services;
 using Langgo.Infrastructure;
